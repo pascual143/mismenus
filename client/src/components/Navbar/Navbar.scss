@@ -1,0 +1,28 @@
+  
+nav {
+    position: fixed !important;
+    top: 0;
+    width: 100%;
+    z-index: 1;
+
+    .logo {
+        margin-bottom: 0;
+    }
+
+    .nav-item {
+        display: block !important;
+        border: 0;
+        padding: 0;
+        a {
+            color: #fff !important;
+    
+            &:hover {
+                color: #000 !important;
+            }
+        }
+    }
+}
+
+.nav-clear {
+    height: 59px;
+}

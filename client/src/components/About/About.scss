@@ -1,0 +1,30 @@
+#about-title {
+    color: black;
+    text-align: center;
+    padding-top: 50px;
+
+    h1 {
+        padding-bottom: 20px;
+
+        @media screen and (max-width: '480px') {
+            font-size: 1.7em;
+        }
+    }
+}
+
+#image-holder {
+    text-align: center;
+    padding-bottom: 10px;
+
+    img {
+        width: 70%;
+
+        @media screen and (min-width: '1080px') {
+            height: 600px;
+        }
+    }
+}
+
+#container {
+    text-align: center;
+}

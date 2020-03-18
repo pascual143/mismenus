@@ -1,0 +1,86 @@
+/* Recipes page title and paragraph styles */
+
+#recipes-title {
+    text-align: center;
+    padding-top: 50px;
+
+    @media screen and (max-width: '480px') {
+        font-size: 1.7em;
+    }
+}
+
+#recipes-para {
+    text-align: center;
+    padding-bottom: 100px;
+
+    @media screen and (max-width: '480px') {
+        padding-bottom: 10px;
+    }
+
+    p {
+        font-size: 30px;
+        font-weight: 100;
+        color: #EB6864;
+
+        @media screen and (max-width: '480px') {
+            font-size: 1.4em;
+        }
+    }
+}
+
+/* This container is where everything else will live */
+
+#recipes-container {
+    width: 80%;
+    margin: 0 auto;
+
+    @media screen and (max-width: '480px') {
+        width: 90%;
+    }
+
+    #recipes-left {
+        background-color: whitesmoke;
+        border: 2px #000 solid;
+        padding: 10px;
+        width: 30%;
+        height: auto;
+        float: left;
+        overflow: auto;
+
+        @media screen and (max-width: '480px') {
+            width: 100%;
+        }
+
+        #recipes-list-title {
+            text-align: center;
+            padding-bottom: 10px;
+
+            h4 {
+                text-decoration-line: underline;
+            }
+        }
+        
+        #recipes-list-container  {
+        
+            Link {
+                text-decoration: none;
+            }
+        
+            .recipe-item {
+                padding: 10px;
+                background-color: #fff;
+                color: #EB6864;
+                margin-bottom: 10px;
+                overflow: auto;
+        
+                &:hover {
+                    background-color: #EB6864;
+                    color: #fff;
+                    transition-duration: .5s;
+                }
+            }
+        }
+    }
+    
+}
+
