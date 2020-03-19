@@ -1,0 +1,99 @@
+/* Recipe preview */
+#recipe-preview-container {
+    text-align: center;
+    padding-bottom: 25px;
+    border: 1px lightgray solid;
+    border-radius: 20px;
+    width: 500px;
+    margin: 50px auto;
+    position: relative;
+    background-color: lightgray;
+
+    @media screen and (max-width: '480px') {
+        width: 90% !important;
+    }
+
+    .recipe-info {
+        color: #EB6864;
+        font-weight: bold;
+    }
+
+    .recipe-content {
+        color: #000;
+    }
+
+    .recipe-steps {
+        min-height: 50px;
+        max-height: 300px;
+        overflow: auto;
+    }
+
+    .recipe-title {
+        background-color: lightgray;
+        color: #000;
+        height: 100px;
+        position: absolute;
+        width: 100%;
+        top: 0;
+        border-radius: 20px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-bottom: 3px white solid;
+
+        @media screen and (max-width: '480px') {
+            font-size: 1.7em;
+        }
+    }
+
+    .clear-title {
+        height: 100px;
+    }
+
+    img {
+        margin-top: 30px;
+        margin-bottom: 30px;
+        height: 230px;
+        width: 210px;
+
+        @media screen and (max-width: '480px') {
+            width: 50%;
+        }
+    }
+
+    p {
+        margin-bottom: 30px;
+        margin-left: 10px;
+        margin-right: 10px;
+        text-align: center;
+    }
+
+    #stars-outer {
+        position: relative;
+        display: none;
+
+        &::before {
+            content: "\f005 \f005 \f005 \f005 \f005";
+            font-family: 'Font Awesome 5 Free';
+            font-weight: 900;
+            color: #CCC;
+        }
+
+        #stars-inner {
+            position: absolute;
+            top: 0;
+            left: 0;
+            white-space: nowrap;
+            overflow: hidden;
+            width: 0;
+
+            &::before {
+                content: "\f005 \f005 \f005 \f005 \f005";
+                font-family: 'Font Awesome 5 Free';
+                font-weight: 900;
+                color: #f8ce0b;
+            }
+        }
+    }
+}
+/* The End */

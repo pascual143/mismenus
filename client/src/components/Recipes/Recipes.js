@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import './Recipes.scss';
-// import { Link } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 // import axios from 'axios';
 
 
@@ -8,11 +8,14 @@ import './Recipes.scss';
 class Recipes extends Component {
     constructor() {
         super();
-        
+        this.state = {
+            recipes: [],
+            loading: true,
+        };
     }
 
     render() {
-        // const { recipes, loading} = this.state;
+        const { recipes, loading } = this.state;
         return (
             <div>
                 <div id='recipes-title'>
@@ -28,7 +31,11 @@ class Recipes extends Component {
                         </div>
                     </div>
                     <div id='recipes-list-container'>
-                        
+                        <ul>
+                            {  
+                                recipes.map(recipe =>  <Link key = {recipe._id} to={{ pathname: `/${recipe._id}`, singleRecipe: `${JSON.stringify(recipe)}` }} style={{ textDecoration: 'none' }}><li className='recipe-item' value={recipe.title} onClick = {this.fetchRecipe}>{recipe.title}</li></Link>)
+                            }
+                        </ul>
                     </div>
                 </div>
             </div>
