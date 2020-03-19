@@ -6,6 +6,7 @@ import About from './components/About/About';
 import Contact from './components/Contact/Contact';
 import Recipes from './components/Recipes/Recipes';
 import Recipe from './components/Recipe/Recipe';
+import NotFound from './components/NotFound/NotFound';
 
 
 const App = () => {
@@ -19,6 +20,7 @@ const App = () => {
           <Route path = '/contact' component = { Contact }/>
           <Route exact path = '/recipes' component = { Recipes } />
           <Route exact path = '/:recipeId' component = { Recipe } />
+          <Route component = { NotFound } />
         </Switch>
       </React.Fragment>
     </BrowserRouter>
