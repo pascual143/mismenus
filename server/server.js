@@ -30,7 +30,7 @@ const { connect } = require('./database');
 // Import model/ collection
 const { recipes } = require('./database'); 
 // Set the port number to 5000
-const port = 5000;
+const PORT = process.env.PORT || 5000;
 
 // Handling the database errors
 connect.on('error', console.error.bind(console, 'connection error:'));
@@ -130,4 +130,6 @@ app.get('/image/:filename', (req, res) =>{
 });
 
 
-app.listen(port, console.log(`The Recipe App is running on port: ${port}`));
+app.listen(PORT, () => {
+        console.log(`The Recipe App is running on port: ${PORT}`)
+});
