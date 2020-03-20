@@ -48,9 +48,9 @@ app.post('/upload',(req, res) => {
                 console.log('New recipe successfully added...');
         }
         
-        setTimeout(() => {res.redirect('http://localhost:5000/')}, 500);           
+        // setTimeout(() => {res.redirect('http://localhost:5000/')}, 500);           
 });
-        setTimeout(() => {res.redirect('http://localhost:5000/')}, 500);
+        // setTimeout(() => {res.redirect('http://localhost:5000/')}, 500);
 });
 
 
