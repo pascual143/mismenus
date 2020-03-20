@@ -30,7 +30,7 @@ const { connect } = require('./database');
 // Import model/ collection
 const { recipes } = require('./database'); 
 // Set the port number to 5000
-const PORT = process.env.PORT || 5000;
+const port = 5000;
 
 // Handling the database errors
 connect.on('error', console.error.bind(console, 'connection error:'));
@@ -48,9 +48,9 @@ app.post('/upload',(req, res) => {
                 console.log('New recipe successfully added...');
         }
         
-        // setTimeout(() => {res.redirect('http://localhost:5000/')}, 500);           
+        // setTimeout(() => {res.redirect('http://localhost:3000/')}, 500);           
 });
-        // setTimeout(() => {res.redirect('http://localhost:5000/')}, 500);
+        // setTimeout(() => {res.redirect('http://localhost:3000/')}, 500);
 });
 
 
@@ -113,7 +113,7 @@ app.get('/image/:filename', (req, res) =>{
                 // Check if file
                 if (!file || file.length === 0) {
                         return res.status(404).json({
-                                err: 'No file exists' 
+                                err: 'No file exists'
                         });
                 }
                 // Check if image
@@ -130,6 +130,4 @@ app.get('/image/:filename', (req, res) =>{
 });
 
 
-app.listen(PORT, () => {
-        console.log(`The Recipe App is running on port: ${PORT}`)
-});
+app.listen(port, console.log(`The Recipe App is running on port: ${port}`));
