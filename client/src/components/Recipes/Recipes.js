@@ -32,7 +32,7 @@ class Recipes extends Component {
         // Local server
         // this.fetchAllRecipes('http://localhost:5000/api/recipes');
         // Live server
-        this.fetchAllRecipes('https://misrecetaspascual.herokuapp.com/api/recipes');
+        this.fetchAllRecipes('https://react-recipe-app-19.herokuapp.com/api/recipes');
     }
 
 
