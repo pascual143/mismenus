@@ -98,7 +98,7 @@ export default class RecipeForm extends Component {
             
             // Send the data
             // Live server
-            fetch('https://misrecetaspascual.heroku.com/upload', {
+            fetch('https://misrecetaspascual.herokuapp.com/upload', {
                 method: 'post',
                 redirect: 'follow',
                 headers: {
