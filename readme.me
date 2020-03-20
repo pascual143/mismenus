@@ -2,6 +2,14 @@ el deployment lo hice siguiendo este tutorial
 
 https://dev.to/pacheco/how-to-deploy-a-webapp-to-heroku-node-js-react-js-and-mongodb-5a7g
 
-tienes que conectar manualmente heroku as tu github
+*tienes que conectar manualmente heroku as tu github
 
     // "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install --prefix client && npm run build --prefix client" 
+
+* cambiar la conexion a la dabase
+// Initiating a connection to the database
+mongoose.connect('mongodb://pascual143:Oberon143@ds059195.mlab.com:59195/heroku_z41ctdp0', { useNewUrlParser: true }); 
+// mongoose.connect('mongoDB');
+
+*cambiar el puerto en el server
+const PORT = process.env.PORT || 5000;
